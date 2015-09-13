@@ -1,0 +1,13 @@
+These are commands or search terms that might help in network forensics:
+
+were any commands written out to command prompt by a script?: 
+strings xyz.pcap | grep echo
+
+Is FTP command issued?
+strings xyz.pcap | grep ftp
+
+any .exe files downloaded?
+strings xyz.pcap | grep exe  OR strings | grep \.exe  OR strings | grep \s[a-zA-Z0-9]\.exe
+
+any obfuscated javascript?
+strings xyz.pcap | grep eval\(
